@@ -46,7 +46,12 @@
 
       <div class="row">
         <div class="col-md-8 col-lg-8">
-          <ul class="nav nav-pills nav-stacked">  
+          <ul class="nav nav-pills nav-stacked">
+            <% if flash.notice %>
+              <div class="alert alert-success">
+                <%= flash.notice %>
+              </div>
+            <% end %>
             <%= yield %>
           </ul>
         </div>
